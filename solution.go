@@ -10,8 +10,6 @@ package square
 
 import "math"
 
-const PI float64 = 3.14
-
 type sideCounter int
 
 const (
@@ -22,7 +20,7 @@ const (
 
 func Circle(radius float64) float64 {
 	var res float64 = 0
-	res = PI * math.Pow(radius, 2)
+	res = math.Pi * math.Pow(radius, 2)
 	return res
 }
 
@@ -31,7 +29,7 @@ func Square(sideLen float64) float64 {
 }
 
 func Triangle(sideLen float64) float64 {
-	return (math.Sqrt(3) / 4) * math.Pow(sideLen, 2)
+	return (math.Sqrt(3) * math.Pow(sideLen, 2)) / 4
 }
 
 func CalcSquare(sideLen float64, sidesNum sideCounter) float64 {
